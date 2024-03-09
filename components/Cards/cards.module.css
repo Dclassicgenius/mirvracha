@@ -1,0 +1,236 @@
+.container {
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: linear-gradient(to right, #fbfdff, #d8efff);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #01457a;
+}
+
+.relative {
+  position: relative;
+}
+
+.numberIcon {
+  position: absolute;
+  bottom: 0px;
+  right: -20px;
+  background: linear-gradient(to right, #fdd966, #bcd77e);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.light {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
+}
+
+.sup {
+  font-size: 60%;
+}
+
+.text {
+  color: #01457a;
+  font-size: 24px;
+}
+
+.textCard {
+  background: linear-gradient(to right, #fbfdff, #d8efff);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cardContainer {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #01457a;
+  padding: 30px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.barCard {
+  margin: 50px;
+}
+
+.barCard p {
+  color: #01457a;
+  font-size: 24px;
+}
+
+.barCard p:first-child {
+  margin-bottom: 10px;
+}
+
+.barCard img {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.survivalCard {
+  margin: 50px;
+  font-size: 24px;
+}
+
+.survivalCard p,
+.survivalCard b {
+  color: #01457a;
+}
+
+.survivalCard h3 {
+  margin: 20px 0;
+  color: #01457a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.card {
+  background: #fdd96640;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.percentage {
+  font-size: 76px;
+  font-weight: 700;
+}
+
+.cardText {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.cardLayout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .text {
+    font-size: 20px;
+  }
+
+  .cardContainer {
+    min-width: 750px;
+  }
+
+  .barCard {
+    margin: 30px;
+  }
+
+  .survivalCard {
+    margin: 30px;
+  }
+
+  .cardLayout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cardLayout > :nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 20px;
+  }
+
+  .cardContainer {
+    min-width: 550px;
+  }
+
+  .barCard {
+    margin: 20px;
+  }
+  .barCard p {
+    font-size: 20px;
+  }
+
+  .survivalCard {
+    margin: 20px;
+    font-size: 20px;
+  }
+
+  .percentage {
+    font-size: 72px;
+  }
+
+  .cardLayout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .cardContainer {
+    min-width: 300px;
+  }
+  .cardLayout {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .barCard p {
+    font-size: 18px;
+  }
+
+  .survivalCard {
+    font-size: 18px;
+  }
+
+  .barCard {
+    margin: 10px;
+  }
+
+  .survivalCard {
+    margin: 10px;
+  }
+
+  .survivalCard h3 {
+    margin: 20px 0;
+    font-size: 32px;
+  }
+
+  .percentage {
+    font-size: 68px;
+  }
+
+  .title,
+  .text {
+    font-size: 18px;
+  }
+
+  .numberIcon {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .textCard {
+    padding: 30px 10px;
+  }
+}

@@ -1,0 +1,124 @@
+.accordion {
+  border: 1px solid #01457a;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.accordionItem {
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.accordionTitle {
+  background-image: url("../../public/acc-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  color: #01457a;
+  font-size: 24px;
+  width: 350px;
+  height: 115px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 400;
+}
+.flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.accordionText {
+  color: #01457a;
+  font-weight: 400;
+  font-size: 24px;
+  max-height: 80px;
+  overflow: hidden;
+  position: relative;
+}
+
+.accordionText::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+}
+
+.expanded {
+  max-height: none;
+}
+
+.accordionText.expanded::after {
+  content: none;
+}
+
+.accordionPointer {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .accordionItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .accordionTitle {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+  }
+
+  .accordionText {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flex {
+    display: flex;
+  }
+
+  .accordionItem {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .accordionTitle {
+    font-size: 18px;
+    width: 200px;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    padding-right: 15px;
+  }
+
+  .accordionText {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .accordionTitle {
+    font-size: 20px;
+    width: 220px;
+  }
+}
